@@ -13,40 +13,49 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-        child: Row(
+        child:Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(20),
-
-              color: Colors.red,
-              child: Text('1'),
-            ),
 
             Expanded(
-              flex:2, // 2 means 20% of 100 . 20 aana and 80 nichena etle 100 pura
-              child: Container(
-                //width: 70,
-
-                padding: EdgeInsets.all(20),
-                color: Colors.blue,
-                child: Text('2'),
-              ),
+              flex: 8,
+                child:Container(
+                  constraints: BoxConstraints.expand(),
+                  color: Colors.red,
+                  child: Center(
+                      child: Text('8',
+                        style: TextStyle(
+                          color  : Colors.white,
+                          fontSize: 30
+                        )
+                      )
+                  ),
+                )
             ),
+            Expanded(
+              flex: 5,
+                child:Container(
+                  constraints: BoxConstraints.expand(),
 
-            Expanded( //jetli blank space hoy tya sudhi automatic laile
-              flex:8,
-              child: Container(
-                //width: 100,
-                padding: EdgeInsets.all(20),
-                color: Colors.green,
-                child: Text('3'),
-              ),
+                  color: Colors.indigo,
+
+                    child: Center(
+                      child:Text('5',
+                          style: TextStyle(
+                              color  : Colors.white,
+                              fontSize: 30
+                          )
+                      ) ,
+                    )
+
+                ),
             ),
           ],
+        ),
+            ),
 
-        )
-        )
-      ),
-    );
+
+        ),
+        );
+
   }
 }
